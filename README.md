@@ -1,6 +1,6 @@
 # Read package version actions
 
-Read your version in `package.json`
+Read your endpoint data in `package.json`
 
 ## Example workflow
 
@@ -44,12 +44,11 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Read package.json
-        uses: dutscher/read-package-json-endpoint-actions@v1
+        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
         id: package-json-endpoint
 
       - name: Show version number
-        run: echo "Version is ${{ steps.package-json-endpoint.outputs.endpoint }}"
-        # Version is 1.0.0
+        run: echo "${{ steps.package-json-endpoint.outputs.endpoint }}"
 ```
 
 
