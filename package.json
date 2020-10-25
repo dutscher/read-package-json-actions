@@ -5,6 +5,7 @@
   "description": "Output version numbers with package.json",
   "main": "lib/main.js",
   "scripts": {
+    "npm:install": "npm install",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
     "commit": "git-cz",
