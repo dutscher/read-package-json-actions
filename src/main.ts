@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { getPackageJSON } from './getPackageJSON';
+import { getPackageEndpoint } from './getPackageEndpoint';
 
 async function run() {
   try {
@@ -7,10 +7,10 @@ async function run() {
 
     core.debug(`Load package.json at ${path}`);
 
-    const result = getPackageJSON(path);
+    const result = getPackageEndpoint(path);
 
-    core.debug(`set output: json: ${result}`);
-    core.setOutput('json', result);
+    core.debug(`set output: endpoint: ${result}`);
+    core.setOutput('endpoint', result);
   } catch (error) {
     core.setFailed(error.message);
   }
