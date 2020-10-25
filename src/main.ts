@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { getPackageVersion } from './getPackageVersion';
+import { getPackageJSON } from './getPackageJSON';
 
 async function run() {
   try {
@@ -7,10 +7,10 @@ async function run() {
 
     core.debug(`Load package.json at ${path}`);
 
-    const result = getPackageVersion(path);
+    const result = getPackageJSON(path);
 
-    core.debug(`set output: version: ${result}`);
-    core.setOutput('version', result);
+    core.debug(`set output: json: ${result}`);
+    core.setOutput('json', result);
   } catch (error) {
     core.setFailed(error.message);
   }

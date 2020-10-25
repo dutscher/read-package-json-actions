@@ -31,7 +31,7 @@ jobs:
         id: package-version
 
       - name: Show version number
-        run: echo "Version is ${{ steps.package-version.outputs.version }}"
+        run: echo "Version is ${{ steps.package-version.outputs.json.version }}"
         # Version is 1.0.0
 ```
 
@@ -69,7 +69,7 @@ jobs:
         id: package-version
 
       - name: Show version number
-        run: echo "Version is ${{ steps.package-version.outputs.version }}"
+        run: echo "Version is ${{ steps.package-version.outputs.json.name }} ${{ steps.package-version.outputs.json.version }}"
         # Version is 0.5.0
 ```
 

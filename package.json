@@ -1,5 +1,5 @@
 {
-  "name": "read-package-version-actions",
+  "name": "read-package-json-actions",
   "version": "1.0.0",
   "private": true,
   "description": "Output version numbers with package.json",
