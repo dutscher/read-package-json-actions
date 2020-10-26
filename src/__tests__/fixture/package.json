@@ -1,0 +1,22 @@
+{
+  "name": "fixture",
+  "version": "0.0.0",
+  "endpoint": {
+    "url": "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?",
+    "params": "outFields=*&returnGeometry=false&f=json&outSR=4326&where=",
+    "locations": [
+      "Berlin Treptow-Köpenick",
+      "Berlin Mitte",
+      "Berlin Friedrichshain-Kreuzberg",
+      "Berlin Pankow",
+      "Berlin Lichtenberg",
+      "Berlin Marzahn-Hellersdorf",
+      "Berlin Charlottenburg-Wilmersdorf",
+      "Berlin Steglitz-Zehlendorf",
+      "Berlin Tempelhof-Schöneberg",
+      "Berlin Neukölln",
+      "Berlin Reinickendorf",
+      "Berlin Spandau"
+    ]
+  }
+}

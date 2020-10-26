@@ -1,10 +1,6 @@
 import fs from 'fs';
 import { join } from 'path';
 
-const Entities = require('html-entities').XmlEntities;
-const entities = new Entities();
-
-
 /**
  * Find package.json with path.
  * @param path
@@ -19,12 +15,12 @@ export const findPackageJson = (path: string): string => {
  */
 export const getPackageEndpoint = (path: string): string => {
   const packageJson = findPackageJson(path);
-  const json = JSON.parse(packageJson);
+  const json = JSON.parse(packageJson).endpoint;
   let endpoint = '';
 
   // endpoint
   // url + params + locations
-  // entities.encode(GEN = '' OR GEN = '')
+  // escape(GEN = '' OR GEN = '')
 
   endpoint += json.url;
   endpoint += json.params;
@@ -33,7 +29,7 @@ export const getPackageEndpoint = (path: string): string => {
     return `GEN = '${location.toUpperCase()}'`;
   });
 
-  endpoint += entities.encode(locations.join(' OR '));
+  endpoint += escape(locations.join(' OR '));
 
   return endpoint;
 };
