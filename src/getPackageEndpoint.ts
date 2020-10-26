@@ -29,7 +29,7 @@ export const getPackageEndpoint = (path: string): string => {
     return `GEN = '${location.toUpperCase()}'`;
   });
 
-  endpoint += escape(locations.join(' OR '));
+  endpoint += encodeURI(locations.join(' OR '));
 
   return endpoint;
 };
