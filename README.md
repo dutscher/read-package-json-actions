@@ -44,7 +44,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Read package.json
-        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+        uses: dutscher/read-package-json-endpoint-actions@v1.3.37
         id: package-json-endpoint
 
       - name: Show version number
